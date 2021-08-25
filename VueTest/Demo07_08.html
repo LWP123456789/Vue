@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Demo07</title>
+	<script src="vue.min.js"></script>
+</head>
+<body>
+	<div id="root"></div>
+</body>
+<script>
+	// 生命周期函数 在 某一时刻 会 自动执行 的函数
+	const app = Vue.createApp({	// Application 
+		data(){ 
+			return {
+				message: 'lep101.top' // 1、在这里定义了一个数据，也就是model
+			}
+		},
+		methods: {
+			handleItemClick() {
+				this.message = this.message=='lep101.top'?'乐培':'lep101.top'
+			}
+		},
+		/*mounted() {
+			alert('mounted')
+		},*/
+		beforeCreate() { // 在实例生成之前会自动执行的函数
+			console.log('beforeCreate')
+		},
+		created() { // 在实例生成之后会自动执行的函数
+			console.log('created')
+		},
+		beforeMount() { // 在模板渲染完成之前自动执行的函数
+			console.log('beforeMount')
+		},
+		mounted() { // 在模板渲染完成之后自动执行的函数
+			console.log('mounted')
+		},
+		beforeUpdate() { // 当data中数据变化时,会立即自动执行的函数
+			console.log('beforeUpdate')
+			/*console.log(document.getElementById('app').innerHTML)*/
+		},
+		updated() { // 当data中数据变化时,页面重新渲染完成后,会自动执行的函数
+			console.log('updated')
+			/*console.log(document.getElementById('app').innerHTML)*/
+		},
+		beforeUnmount() { // 当vue应用失效时,会自动执行的函数
+			console.log('beforeUnmount')
+		},
+		unmounted() { // 当vue应用失效时,会自动执行的函数
+			console.log('unmounted')
+		},
+		template:"<h2 v-on:click='handleItemClick'>{{message}}</h2>" //2、模板，View
+		// 定义后，Vue自动关联, vm 根组件
+	})
+	const vm = app.mount("#root") // .mount 挂载到对应ID的DOM对象上面
+	/*console.log(vm)  // mvvm m model v view vm ViewModel*/
+
+</script>
+</html>

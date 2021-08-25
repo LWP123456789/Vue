@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计数器</title>
+
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="vue.min.js"></script>
+<script>
+    Vue.createApp({  
+        data() {
+            return {
+                counter: 1
+            }
+        }, 
+        mounted() {
+            console.log('页面加载完成后-自动执行')
+            setInterval(() => {
+                this.counter += 1 //这个this.counter指向的就是data中的counter
+                //this.$data.counter += 1  //效果相同
+            },1000)
+        },
+        template:'<div>{{counter}}</div>'  
+    }).mount("#root")   
+</script>
+</html>
