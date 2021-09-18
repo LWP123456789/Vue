@@ -25,6 +25,16 @@
 		"})"
 				],
 		"description": "Log output to console"
-	   }	  
+	},
+	   "for循环": {
+		"prefix": "for",
+		"body": [
+		 "for (let index = 0; index < array.lenth; index++) {",
+				  "    const element = array[index];",
+				  "    ",
+		"}"
+				],
+		"description": "Log output to console"
+	   }	 
 	// }
 }
