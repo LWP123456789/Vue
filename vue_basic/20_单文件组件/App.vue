@@ -17,4 +17,17 @@
 			Student
 		}
 	}
+	// const school = Vue.extend({
+	// 	data() {
+	// 		return {
+				
+	// 		}
+	// 	},
+	// 	methods: {
+			
+	// 	},
+	// })
+	// export default school //ES6语法之一
+
+	
 </script>
