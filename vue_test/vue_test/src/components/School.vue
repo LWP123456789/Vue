@@ -10,8 +10,8 @@
 		name:'School',
 		data() {
 			return {
-				name:'尚硅谷',
-				address:'北京·昌平'
+				name:'河南大学',
+				address:'河南·开封'
 			}
 		},
 	}
