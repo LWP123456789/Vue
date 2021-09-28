@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<h2 @click="showName">学生姓名：{{name}}</h2>
-		<h2>学生性别：{{sex}}</h2>
+		<h2 @click="showName">学校名称：{{name}}</h2>
+		<h2>学校地址：{{address}}</h2>
 	</div>
 </template>
 
@@ -9,12 +9,12 @@
 	//引入一个混合
 	import {mixin,mixin2} from '../mixin'
 	export default {
-		name:'Student',
+		name:'School',
 		data() {
 			return {
-				name:'乐培',
+				name:'河南大学',
 				// name:'乐培',
-				sex:'男',
+				address:'北京',
 				// age:18
 			}
 		},
