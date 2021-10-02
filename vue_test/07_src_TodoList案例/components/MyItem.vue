@@ -66,4 +66,12 @@
 	li:last-child {
 	border-bottom: none;
 	}
+
+	li:hover{
+		background-color: #ddd;
+	}
+	
+	li:hover button{
+		display: block;
+	}
 </style>
