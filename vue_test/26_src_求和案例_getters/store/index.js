@@ -45,7 +45,7 @@ const state = {
     sum:0
 }
 
-//准备getters--用于将state中的数据进行加工
+//准备getters--用于将state中的数据进行加工 简化了插值表达式
 const getters = {
     bigSum(state){
         return state.sum * 10
