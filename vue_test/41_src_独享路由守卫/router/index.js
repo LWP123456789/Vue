@@ -28,7 +28,7 @@ const router = new VueRouter({
                     component:News,
                     meta:{title:'新闻',isAuth:true},
                     beforeEnter:(to,from,next) => {
-                        console.log('前置路由守卫',to,from)
+                        console.log('独享路由守卫',to,from)
                         if(to.meta.isAuth){//判断是否需要鉴权
                             if(localStorage.getItem('school') === 'henu'){
                                 // document.title = to.meta.title
@@ -94,7 +94,7 @@ const router = new VueRouter({
 // })
 //全局后置路由守卫--初始化的时候被调用、每次路由切换之后被调用
 router.afterEach((to,from)=>{
-    console.log('后置路由守卫',to,from)
+    console.log('独享路由守卫',to,from)
     document.title = to.meta.title || 'lep101'
 })
 
